@@ -1,0 +1,18 @@
+{% extends "books/base.html" %}
+
+{% block content %}
+
+    <div class="container">
+
+        {% for book in books %}
+            <h3><strong>Title: </strong>{{book.title}}</h3>
+            <p><strong>Author(s): </strong>{{book.properties.authors}}</p>
+            <p><strong>ISBN: </strong>{{book.properties.ISBN}}</p>
+            <p><strong>Price: </strong>${{book.properties.price}}</p>
+            <p><strong>Condition: </strong>{{book.properties.condition}}</p>
+            <p><strong>Hardcover?: </strong>{{book.properties.hardcover}}</p>
+        {% endfor %}
+
+    </div>
+    
+{% endblock %}
